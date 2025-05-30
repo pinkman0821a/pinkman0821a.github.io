@@ -39,12 +39,14 @@
       margin-bottom: 20px;
       border-radius: 8px;
       box-shadow: 0 0 8px rgb(0 0 0 / 0.1);
+      position: relative;
     }
     h2 {
       color: #34495e;
       margin-bottom: 12px;
       border-bottom: 2px solid #3498db;
       padding-bottom: 6px;
+      display: inline-block;
     }
     ul {
       list-style: inside disc;
@@ -67,8 +69,10 @@
       padding: 6px 12px;
       border-radius: 4px;
       cursor: pointer;
-      margin-top: 10px;
       font-size: 0.9rem;
+      position: absolute;
+      top: 20px;
+      right: 20px;
     }
   </style>
 </head>
@@ -81,6 +85,7 @@
 
 <section>
   <h2>Perfil Profesional</h2>
+  <button class="toggle-btn">Ocultar</button>
   <p>
     Profesional en sistemas con experiencia en administración de servidores Windows Server, Active Directory, gestión de redes y soporte técnico a nivel nacional. Líder de equipos técnicos con habilidades avanzadas en Linux y administración de infraestructuras.
   </p>
@@ -88,6 +93,7 @@
 
 <section>
   <h2>Educación</h2>
+  <button class="toggle-btn">Ocultar</button>
   <ul>
     <li>Ingeniería de Software - Fundación Universitaria Compensar (Actualmente cursando 6º semestre)</li>
     <li>Tecnólogo en Sistemas - Formación técnica en servidores y redes avanzadas</li>
@@ -96,6 +102,7 @@
 
 <section>
   <h2>Experiencia Laboral</h2>
+  <button class="toggle-btn">Ocultar</button>
   <ul>
     <li><strong>Analista Senior de Sistemas - Zonalogística</strong> (Dic 2023 - Actual)
       <ul>
@@ -109,6 +116,7 @@
 
 <section>
   <h2>Habilidades Técnicas</h2>
+  <button class="toggle-btn">Ocultar</button>
   <ul>
     <li>Windows Server (2025), Active Directory, IIS</li>
     <li>Administración avanzada de Linux</li>
@@ -120,15 +128,40 @@
 
 <section class="contact-info">
   <h2>Contacto</h2>
+  <button class="toggle-btn">Ocultar</button>
   <p>Email: <a href="mailto:pinkman0821@gmail.com">pinkman0821@gmail.com</a></p>
   <p>GitHub: <a href="https://github.com/Juangonzalez0821" target="_blank" rel="noopener">github.com/Juangonzalez0821</a></p>
   <p>Celular: +57 302 546 9721</p>
 </section>
 
 <script>
-  // Si quieres podemos meter funcionalidad para mostrar/ocultar secciones,
-  // pero con esta base ya está full funcional.
+  // Seleccionamos todos los botones toggle
+  const toggleButtons = document.querySelectorAll('.toggle-btn');
+
+  toggleButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      // El contenedor section padre
+      const section = button.parentElement;
+
+      // Los hijos del section, menos el h2 y el botón (para ocultar el contenido)
+      // Consideramos todo lo que no sea h2 o button para esconder
+      const childrenToToggle = Array.from(section.children).filter(
+        el => el.tagName !== 'H2' && el !== button
+      );
+
+      const isVisible = childrenToToggle[0].style.display !== 'none';
+
+      if (isVisible) {
+        childrenToToggle.forEach(el => el.style.display = 'none');
+        button.textContent = 'Mostrar';
+      } else {
+        childrenToToggle.forEach(el => el.style.display = '');
+        button.textContent = 'Ocultar';
+      }
+    });
+  });
 </script>
 
 </body>
 </html>
+
