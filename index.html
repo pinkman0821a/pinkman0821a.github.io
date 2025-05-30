@@ -53,11 +53,13 @@
       margin-left: 15px;
       margin-top: 8px;
     }
-    .contact-info a {
+    .contact-info a,
+    .documents a {
       color: #3498db;
       text-decoration: none;
     }
-    .contact-info a:hover {
+    .contact-info a:hover,
+    .documents a:hover {
       text-decoration: underline;
     }
 
@@ -126,6 +128,16 @@
   </ul>
 </section>
 
+<section class="documents">
+  <h2>Documentos</h2>
+  <button class="toggle-btn">Ocultar</button>
+  <ul>
+    <li><a href="documentos/diploma_tecnologo.pdf" target="_blank" rel="noopener">Diploma Tecnólogo en Sistemas</a></li>
+    <li><a href="documentos/certificacion_windows_server.pdf" target="_blank" rel="noopener">Certificación Administración Windows Server</a></li>
+    <li><a href="documentos/certificacion_redes.pdf" target="_blank" rel="noopener">Certificación Redes Corporativas</a></li>
+  </ul>
+</section>
+
 <section class="contact-info">
   <h2>Contacto</h2>
   <button class="toggle-btn">Ocultar</button>
@@ -144,7 +156,6 @@
       const section = button.parentElement;
 
       // Los hijos del section, menos el h2 y el botón (para ocultar el contenido)
-      // Consideramos todo lo que no sea h2 o button para esconder
       const childrenToToggle = Array.from(section.children).filter(
         el => el.tagName !== 'H2' && el !== button
       );
@@ -164,4 +175,5 @@
 
 </body>
 </html>
+
 
