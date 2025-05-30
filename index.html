@@ -1,61 +1,134 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Juan González - Hoja de Vida</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hoja de Vida - Juan Manuel González Hernández</title>
+  <style>
+    /* Reset y estilos base */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    body {
+      background: #f0f2f5;
+      color: #333;
+      line-height: 1.6;
+      padding: 20px;
+      max-width: 800px;
+      margin: auto;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+    header h1 {
+      font-size: 2.8rem;
+      color: #2c3e50;
+    }
+    header p {
+      font-size: 1.1rem;
+      color: #555;
+      margin-top: 4px;
+    }
+    section {
+      background: #fff;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 8px rgb(0 0 0 / 0.1);
+    }
+    h2 {
+      color: #34495e;
+      margin-bottom: 12px;
+      border-bottom: 2px solid #3498db;
+      padding-bottom: 6px;
+    }
+    ul {
+      list-style: inside disc;
+      margin-left: 15px;
+      margin-top: 8px;
+    }
+    .contact-info a {
+      color: #3498db;
+      text-decoration: none;
+    }
+    .contact-info a:hover {
+      text-decoration: underline;
+    }
+
+    /* Botones para mostrar/ocultar */
+    .toggle-btn {
+      background: #3498db;
+      color: white;
+      border: none;
+      padding: 6px 12px;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-top: 10px;
+      font-size: 0.9rem;
+    }
+  </style>
 </head>
 <body>
-  <header>
-    <h1>Juan David González</h1>
-    <p>Analista Senior de Sistemas | Estudiante de Ingeniería de Software</p>
-  </header>
 
-  <section id="contacto">
-    <h2>Contacto</h2>
-    <ul>
-      <li>📧 pinkman0821@gmail.com</li>
-      <li>📱 +57 302 546 9721</li>
-      <li>🐙 <a href="https://github.com/Juangonzalez0821" target="_blank">GitHub: juangonzalez0821</a></li>
-    </ul>
-  </section>
+<header>
+  <h1>Juan Manuel González Hernández</h1>
+  <p>Analista Senior de Sistemas | Administración Windows Server | Líder Técnico</p>
+</header>
 
-  <section id="perfil">
-    <h2>Perfil Profesional</h2>
-    <p>Profesional en sistemas con experiencia como Analista Senior de Sistemas en Zonalogística. Líder del área en Cundinamarca con soporte remoto a nivel nacional. Experto en servidores Windows Server 2025, Active Directory, redes, Linux y soporte técnico.</p>
-  </section>
+<section>
+  <h2>Perfil Profesional</h2>
+  <p>
+    Profesional en sistemas con experiencia en administración de servidores Windows Server, Active Directory, gestión de redes y soporte técnico a nivel nacional. Líder de equipos técnicos con habilidades avanzadas en Linux y administración de infraestructuras.
+  </p>
+</section>
 
-  <section id="experiencia">
-    <h2>Experiencia</h2>
-    <p><strong>Zonalogística</strong> — Analista Senior de Sistemas (Dic 2023 - Actualidad)<br>
-    Responsable del soporte y administración de infraestructura TI en Cundinamarca, liderando personal técnico, gestionando redes, servidores, inventario y seguridad informática.</p>
-  </section>
+<section>
+  <h2>Educación</h2>
+  <ul>
+    <li>Ingeniería de Software - Fundación Universitaria Compensar (Actualmente cursando 6º semestre)</li>
+    <li>Tecnólogo en Sistemas - Formación técnica en servidores y redes avanzadas</li>
+  </ul>
+</section>
 
-  <section id="educacion">
-    <h2>Educación</h2>
-    <ul>
-      <li><strong>Fundación Universitaria Compensar</strong> — Ingeniería de Software (En curso)</li>
-      <li><strong>Tecnólogo en Sistemas</strong> — Enfoque en redes y servidores</li>
-    </ul>
-  </section>
+<section>
+  <h2>Experiencia Laboral</h2>
+  <ul>
+    <li><strong>Analista Senior de Sistemas - Zonalogística</strong> (Dic 2023 - Actual)
+      <ul>
+        <li>Administración y soporte remoto de servidores Windows Server 2025, Active Directory, ISS y carpetas compartidas.</li>
+        <li>Liderazgo del área de sistemas en Cundinamarca, soporte nacional y gestión de inventario de equipos.</li>
+        <li>Administración y mantenimiento de la red corporativa.</li>
+      </ul>
+    </li>
+  </ul>
+</section>
 
-  <section id="certificaciones">
-    <h2>Certificaciones</h2>
-    <ul>
-      <li>CCNA - Cisco Certified Network Associate</li>
-      <li>CCNP (en progreso)</li>
-      <li>CCST - Ciberseguridad, Redes, Soporte TI</li>
-      <li>CyberOps Associate</li>
-      <li>DevNet Associate</li>
-      <li>PCEP & PCAP - Python Institute</li>
-      <li>Linux Essentials y LPIC-1 - LPI</li>
-      <li>Certificación Cisco en Hacking Ético</li>
-    </ul>
-  </section>
+<section>
+  <h2>Habilidades Técnicas</h2>
+  <ul>
+    <li>Windows Server (2025), Active Directory, IIS</li>
+    <li>Administración avanzada de Linux</li>
+    <li>Gestión y soporte de redes corporativas</li>
+    <li>Inventario y gestión de equipos y periféricos</li>
+    <li>Desarrollo básico en HTML, CSS, JavaScript</li>
+  </ul>
+</section>
 
-  <footer>
-    <p>&copy; 2025 Juan David González | Desarrollado con ❤️</p>
-  </footer>
+<section class="contact-info">
+  <h2>Contacto</h2>
+  <p>Email: <a href="mailto:pinkman0821@gmail.com">pinkman0821@gmail.com</a></p>
+  <p>GitHub: <a href="https://github.com/Juangonzalez0821" target="_blank" rel="noopener">github.com/Juangonzalez0821</a></p>
+  <p>Celular: +57 302 546 9721</p>
+</section>
+
+<script>
+  // Si quieres podemos meter funcionalidad para mostrar/ocultar secciones,
+  // pero con esta base ya está full funcional.
+</script>
+
 </body>
 </html>
