@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Juan González - Hoja de Vida</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Juan David González</h1>
+    <p>Analista Senior de Sistemas | Estudiante de Ingeniería de Software</p>
+  </header>
+
+  <section id="contacto">
+    <h2>Contacto</h2>
+    <ul>
+      <li>📧 pinkman0821@gmail.com</li>
+      <li>📱 +57 302 546 9721</li>
+      <li>🐙 <a href="https://github.com/Juangonzalez0821" target="_blank">GitHub: juangonzalez0821</a></li>
+    </ul>
+  </section>
+
+  <section id="perfil">
+    <h2>Perfil Profesional</h2>
+    <p>Profesional en sistemas con experiencia como Analista Senior de Sistemas en Zonalogística. Líder del área en Cundinamarca con soporte remoto a nivel nacional. Experto en servidores Windows Server 2025, Active Directory, redes, Linux y soporte técnico.</p>
+  </section>
+
+  <section id="experiencia">
+    <h2>Experiencia</h2>
+    <p><strong>Zonalogística</strong> — Analista Senior de Sistemas (Dic 2023 - Actualidad)<br>
+    Responsable del soporte y administración de infraestructura TI en Cundinamarca, liderando personal técnico, gestionando redes, servidores, inventario y seguridad informática.</p>
+  </section>
+
+  <section id="educacion">
+    <h2>Educación</h2>
+    <ul>
+      <li><strong>Fundación Universitaria Compensar</strong> — Ingeniería de Software (En curso)</li>
+      <li><strong>Tecnólogo en Sistemas</strong> — Enfoque en redes y servidores</li>
+    </ul>
+  </section>
+
+  <section id="certificaciones">
+    <h2>Certificaciones</h2>
+    <ul>
+      <li>CCNA - Cisco Certified Network Associate</li>
+      <li>CCNP (en progreso)</li>
+      <li>CCST - Ciberseguridad, Redes, Soporte TI</li>
+      <li>CyberOps Associate</li>
+      <li>DevNet Associate</li>
+      <li>PCEP & PCAP - Python Institute</li>
+      <li>Linux Essentials y LPIC-1 - LPI</li>
+      <li>Certificación Cisco en Hacking Ético</li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Juan David González | Desarrollado con ❤️</p>
+  </footer>
+</body>
+</html>
