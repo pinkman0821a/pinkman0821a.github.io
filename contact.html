@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contacto - Juan González</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml" />
+  <meta name="description" content="Ponte en contacto con Juan González, desarrollador de software y analista de sistemas." />
+</head>
+<body>
+  <header>
+    <div class="container header-content">
+      <h1 class="logo">JuanGonzález.dev</h1>
+      <div class="menu-toggle" aria-label="Abrir menú">&#9776;</div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="about.html">Sobre mí</a></li>
+          <li><a href="experience.html">Experiencia</a></li>
+          <li><a href="projects.html">Proyectos</a></li>
+          <li><a href="contact.html" class="active">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="contact-section container">
+    <h2>Contáctame</h2>
+    <p class="contact-intro">¿Tienes una propuesta, duda o simplemente quieres saludar? Rellena el formulario y te responderé lo antes posible.</p>
+
+    <form id="contactForm" class="contact-form" action="#" method="post">
+      <label for="name">Nombre</label>
+      <input type="text" id="name" name="user_name" placeholder="Tu nombre completo" required />
+
+      <label for="email">Correo electrónico</label>
+      <input type="email" id="email" name="user_email" placeholder="tu@correo.com" required />
+
+      <label for="message">Mensaje</label>
+      <textarea id="message" name="message" rows="6" placeholder="Escribe tu mensaje aquí..." required></textarea>
+
+      <button type="submit" class="btn">Enviar mensaje</button>
+    </form>
+
+    <p id="formMessage"></p>
+  </main>
+
+  <footer>
+    <div class="container footer-content">
+      <p>&copy; 2025 Juan González. Todos los derechos reservados.</p>
+      <div class="social-icons">
+        <a href="mailto:pinkman0821@gmail.com"><img src="assets/icons/email.svg" alt="Email" /></a>
+        <a href="https://github.com/Juangonzalez0821" target="_blank"><img src="assets/icons/github.svg" alt="GitHub" /></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Incluye el SDK de EmailJS desde jsDelivr -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <!-- Tu script personalizado -->
+  <script src="js/contact.js"></script>
+</body>
+</html>

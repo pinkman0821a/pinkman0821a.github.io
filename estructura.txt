@@ -1,0 +1,24 @@
+mi-portafolio/
+│
+├── index.html
+├── about.html
+├── experience.html
+├── projects.html
+├── contact.html
+│
+├── css/
+│   └── styles.css
+│
+├── js/
+│   └── main.js
+│
+├── assets/
+│   ├── images/
+│   │   └── perfil.jpg
+│   │   └── proyectos/
+│   └── icons/
+│       └── github.svg
+│       └── email.svg
+│
+├── fonts/ (opcional)
+└── libs/  (opcional)
