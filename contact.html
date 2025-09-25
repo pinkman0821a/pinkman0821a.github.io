@@ -4,60 +4,98 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Contacto - Juan González</title>
-  <link rel="stylesheet" href="css/styles.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml" />
   <meta name="description" content="Ponte en contacto con Juan González, desarrollador de software y analista de sistemas." />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#1F497D',   // azul oscuro
+            secondary: '#4F81BD', // azul claro
+            dark: '#333333',
+          }
+        }
+      }
+    }
+  </script>
 </head>
-<body>
-  <header>
-    <div class="container header-content">
-      <h1 class="logo">JuanGonzález.dev</h1>
-      <div class="menu-toggle" aria-label="Abrir menú">&#9776;</div>
+<body class="text-dark font-sans bg-gray-50">
+
+  <!-- HEADER -->
+  <header class="bg-primary text-white shadow-md">
+    <div class="container mx-auto flex justify-between items-center p-4">
+      <h1 class="text-xl md:text-2xl font-bold">JuanGonzález.dev</h1>
       <nav>
-        <ul class="nav-links">
-          <li><a href="index.html">Inicio</a></li>
-          <li><a href="about.html">Sobre mí</a></li>
-          <li><a href="experience.html">Experiencia</a></li>
-          <li><a href="projects.html">Proyectos</a></li>
-          <li><a href="contact.html" class="active">Contacto</a></li>
+        <ul class="flex space-x-6">
+          <li><a href="index.html" class="hover:text-secondary">Inicio</a></li>
+          <li><a href="about.html" class="hover:text-secondary">Sobre mí</a></li>
+          <li><a href="experience.html" class="hover:text-secondary">Experiencia</a></li>
+          <li><a href="projects.html" class="hover:text-secondary">Proyectos</a></li>
+          <li><a href="contact.html" class="text-secondary font-semibold">Contacto</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <main class="contact-section container">
-    <h2>Contáctame</h2>
-    <p class="contact-intro">¿Tienes una propuesta, duda o simplemente quieres saludar? Rellena el formulario y te responderé lo antes posible.</p>
+  <!-- MAIN -->
+  <main class="container mx-auto px-6 py-12">
+    <h2 class="text-3xl font-bold text-primary mb-6">Contáctame</h2>
+    <p class="mb-8 text-lg text-gray-700">
+      ¿Tienes una propuesta, duda o simplemente quieres saludar?  
+      Rellena el formulario y te responderé lo antes posible.
+    </p>
 
-    <form id="contactForm" class="contact-form" action="#" method="post">
-      <label for="name">Nombre</label>
-      <input type="text" id="name" name="user_name" placeholder="Tu nombre completo" required />
+    <form id="contactForm" class="bg-white p-6 rounded-xl shadow-md max-w-2xl mx-auto space-y-4" action="#" method="post">
+      <!-- Nombre -->
+      <div>
+        <label for="name" class="block font-semibold text-primary mb-1">Nombre</label>
+        <input type="text" id="name" name="user_name" placeholder="Tu nombre completo" required
+               class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-secondary" />
+      </div>
 
-      <label for="email">Correo electrónico</label>
-      <input type="email" id="email" name="user_email" placeholder="tu@correo.com" required />
+      <!-- Email -->
+      <div>
+        <label for="email" class="block font-semibold text-primary mb-1">Correo electrónico</label>
+        <input type="email" id="email" name="user_email" placeholder="tu@correo.com" required
+               class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-secondary" />
+      </div>
 
-      <label for="message">Mensaje</label>
-      <textarea id="message" name="message" rows="6" placeholder="Escribe tu mensaje aquí..." required></textarea>
+      <!-- Mensaje -->
+      <div>
+        <label for="message" class="block font-semibold text-primary mb-1">Mensaje</label>
+        <textarea id="message" name="message" rows="6" placeholder="Escribe tu mensaje aquí..." required
+                  class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-secondary"></textarea>
+      </div>
 
-      <button type="submit" class="btn">Enviar mensaje</button>
+      <!-- Botón -->
+      <button type="submit"
+              class="w-full bg-primary hover:bg-secondary text-white font-semibold px-6 py-3 rounded-lg transition">
+        Enviar mensaje
+      </button>
     </form>
 
-    <p id="formMessage"></p>
+    <p id="formMessage" class="mt-4 text-center text-secondary font-semibold"></p>
   </main>
 
-  <footer>
-    <div class="container footer-content">
+  <!-- FOOTER -->
+  <footer class="bg-primary text-white py-6 mt-12">
+    <div class="container mx-auto flex flex-col md:flex-row justify-between items-center px-6">
       <p>&copy; 2025 Juan González. Todos los derechos reservados.</p>
-      <div class="social-icons">
-        <a href="mailto:pinkman0821@gmail.com"><img src="assets/icons/email.svg" alt="Email" /></a>
-        <a href="https://github.com/Juangonzalez0821" target="_blank"><img src="assets/icons/github.svg" alt="GitHub" /></a>
+      <div class="flex space-x-4 mt-4 md:mt-0">
+        <a href="mailto:pinkman0821@gmail.com"><img src="assets/icons/email.svg" alt="Email" class="h-6 w-6"></a>
+        <a href="https://github.com/Juangonzalez0821" target="_blank"><img src="assets/icons/github.svg" alt="GitHub" class="h-6 w-6"></a>
+        <a href="https://www.linkedin.com/in/pinkman0821" target="_blank"><img src="assets/icons/linkedin.svg" alt="LinkedIn" class="h-6 w-6"></a>
+        <a href="https://wa.me/573025469721" target="_blank"><img src="assets/icons/whatsapp.svg" alt="WhatsApp" class="h-6 w-6"></a>
       </div>
     </div>
   </footer>
 
-  <!-- Incluye el SDK de EmailJS desde jsDelivr -->
+  <!-- EmailJS -->
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-  <!-- Tu script personalizado -->
+  <!-- Script personalizado -->
   <script src="js/contact.js"></script>
 </body>
 </html>

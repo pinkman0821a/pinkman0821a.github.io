@@ -4,58 +4,97 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Proyectos - Juan González</title>
-  <link rel="stylesheet" href="css/styles.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml" />
   <meta name="description" content="Explora los proyectos desarrollados por Juan González en software, redes y más." />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#1F497D',   // azul oscuro
+            secondary: '#4F81BD', // azul claro
+            dark: '#333333',
+          }
+        }
+      }
+    }
+  </script>
 </head>
-<body>
-  <header>
-    <div class="container header-content">
-      <h1 class="logo">JuanGonzález.dev</h1>
+<body class="text-dark font-sans bg-gray-50">
+
+  <!-- HEADER -->
+  <header class="bg-primary text-white shadow-md">
+    <div class="container mx-auto flex justify-between items-center p-4">
+      <h1 class="text-xl md:text-2xl font-bold">JuanGonzález.dev</h1>
       <nav>
-        <ul class="nav-links">
-          <li><a href="index.html">Inicio</a></li>
-          <li><a href="about.html">Sobre mí</a></li>
-          <li><a href="experience.html">Experiencia</a></li>
-          <li><a href="projects.html" class="active">Proyectos</a></li>
-          <li><a href="contact.html">Contacto</a></li>
+        <ul class="flex space-x-6">
+          <li><a href="index.html" class="hover:text-secondary">Inicio</a></li>
+          <li><a href="about.html" class="hover:text-secondary">Sobre mí</a></li>
+          <li><a href="experience.html" class="hover:text-secondary">Experiencia</a></li>
+          <li><a href="projects.html" class="text-secondary font-semibold">Proyectos</a></li>
+          <li><a href="contact.html" class="hover:text-secondary">Contacto</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <main class="projects-section container">
-    <h2>Proyectos Destacados</h2>
+  <!-- MAIN -->
+  <main class="container mx-auto px-6 py-12">
+    <h2 class="text-3xl font-bold text-primary mb-8">Proyectos Destacados</h2>
 
-    <section class="project-card">
-      <h3>NYT News App</h3>
-      <p>Aplicación web desarrollada en HTML, CSS y JavaScript puro que consume la API de Top Stories del New York Times. Incluye categorías dinámicas y diseño responsive.</p>
-      <a href="https://github.com/Juangonzalez0821/nyt-news-app" target="_blank" class="btn">Ver Código</a>
-    </section>
+    <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+      <!-- Proyecto 1 -->
+      <section class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition flex flex-col">
+        <h3 class="text-xl font-semibold text-primary mb-2">NYT News App</h3>
+        <p class="flex-grow leading-relaxed mb-4">
+          Aplicación web desarrollada en HTML, CSS y JavaScript puro que consume la API de Top Stories del New York Times. Incluye categorías dinámicas y diseño responsive.
+        </p>
+        <a href="https://github.com/Juangonzalez0821/nyt-news-app" target="_blank"
+           class="inline-block bg-primary hover:bg-secondary text-white font-semibold px-4 py-2 rounded-lg transition">
+           Ver Código
+        </a>
+      </section>
 
-    <section class="project-card">
-      <h3>Inventario Linux Bash</h3>
-      <p>Script en Bash para la gestión de inventario de equipos Linux, con reporte automático y escaneo de red local.</p>
-      <a href="https://github.com/Juangonzalez0821/linux-inventory-script" target="_blank" class="btn">Ver Repositorio</a>
-    </section>
+      <!-- Proyecto 2 -->
+      <section class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition flex flex-col">
+        <h3 class="text-xl font-semibold text-primary mb-2">Inventario Linux Bash</h3>
+        <p class="flex-grow leading-relaxed mb-4">
+          Script en Bash para la gestión de inventario de equipos Linux, con reporte automático y escaneo de red local.
+        </p>
+        <a href="https://github.com/Juangonzalez0821/linux-inventory-script" target="_blank"
+           class="inline-block bg-primary hover:bg-secondary text-white font-semibold px-4 py-2 rounded-lg transition">
+           Ver Repositorio
+        </a>
+      </section>
 
-    <section class="project-card">
-      <h3>Dashboard de Red</h3>
-      <p>Dashboard de monitoreo de red en Python con Flask y SQLite. Permite visualizar tráfico, latencia y logs internos.</p>
-      <a href="#" target="_blank" class="btn">Próximamente</a>
-    </section>
+      <!-- Proyecto 3 -->
+      <section class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition flex flex-col">
+        <h3 class="text-xl font-semibold text-primary mb-2">Dashboard de Red</h3>
+        <p class="flex-grow leading-relaxed mb-4">
+          Dashboard de monitoreo de red en Python con Flask y SQLite. Permite visualizar tráfico, latencia y logs internos.
+        </p>
+        <a href="#" target="_blank"
+           class="inline-block bg-gray-400 cursor-not-allowed text-white font-semibold px-4 py-2 rounded-lg">
+           Próximamente
+        </a>
+      </section>
+    </div>
   </main>
 
-  <footer>
-    <div class="container footer-content">
+  <!-- FOOTER -->
+  <footer class="bg-primary text-white py-6 mt-12">
+    <div class="container mx-auto flex flex-col md:flex-row justify-between items-center px-6">
       <p>&copy; 2025 Juan González. Todos los derechos reservados.</p>
-      <div class="social-icons">
-        <a href="mailto:pinkman0821@gmail.com"><img src="assets/icons/email.svg" alt="Email" /></a>
-        <a href="https://github.com/Juangonzalez0821" target="_blank"><img src="assets/icons/github.svg" alt="GitHub" /></a>
+      <div class="flex space-x-4 mt-4 md:mt-0">
+        <a href="mailto:pinkman0821@gmail.com"><img src="assets/icons/email.svg" alt="Email" class="h-6 w-6"></a>
+        <a href="https://github.com/Juangonzalez0821" target="_blank"><img src="assets/icons/github.svg" alt="GitHub" class="h-6 w-6"></a>
+        <a href="https://www.linkedin.com/in/pinkman0821" target="_blank"><img src="assets/icons/linkedin.svg" alt="LinkedIn" class="h-6 w-6"></a>
+        <a href="https://wa.me/573025469721" target="_blank"><img src="assets/icons/whatsapp.svg" alt="WhatsApp" class="h-6 w-6"></a>
       </div>
     </div>
   </footer>
 
-  <script src="js/main.js"></script>
 </body>
 </html>

@@ -1,92 +1,85 @@
 <!DOCTYPE html>
-<!-- Declaración del tipo de documento: HTML5 -->
-<html lang="es">
-<!-- El atributo lang indica que el idioma principal del sitio es español -->
+<html lang="es" class="h-full bg-gray-100">
 <head>
   <meta charset="UTF-8">
-  <!-- Define la codificación de caracteres para que soporte tildes y caracteres especiales -->
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Hace que la página sea responsiva adaptándose al ancho del dispositivo móvil -->
-
   <title>Juan González | Portafolio Profesional</title>
-  <!-- Título que aparece en la pestaña del navegador -->
 
-  <link rel="stylesheet" href="css/styles.css">
-  <!-- Enlace a la hoja de estilos externa para dar diseño al sitio -->
+  <!-- TailwindCSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
 
   <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
-  <!-- Icono que aparece en la pestaña o favoritos del navegador -->
-
   <meta name="description" content="Portafolio profesional de Juan González, Analista Senior de Sistemas y estudiante de Ingeniería de Software.">
-  <!-- Descripción breve que usan buscadores para mostrar en resultados -->
 </head>
 
-<body>
-  <!-- HEADER -->
-    <header>
-    <div class="container header-content">
-        <h1 class="logo">JuanGonzález.dev</h1>
-        <div class="menu-toggle" aria-label="Abrir menú">&#9776;</div>
-        <nav>
-        <ul class="nav-links">
-            <li><a href="index.html" class="active">Inicio</a></li>
-            <li><a href="about.html">Sobre mí</a></li>
-            <li><a href="experience.html">Experiencia</a></li>
-            <li><a href="projects.html">Proyectos</a></li>
-            <li><a href="contact.html">Contacto</a></li>
-        </ul>
-        </nav>
-    </div>
-    </header>
+<body class="font-sans text-[#333333]">
 
+  <!-- HEADER -->
+  <header class="bg-[#1F497D] text-white shadow-md">
+    <div class="container mx-auto flex justify-between items-center p-4">
+      <h1 class="text-2xl font-bold">JuanGonzález.dev</h1>
+      <nav>
+        <ul class="flex space-x-6">
+          <li><a href="index.html" class="hover:text-[#4F81BD] font-semibold">Inicio</a></li>
+          <li><a href="about.html" class="hover:text-[#4F81BD]">Sobre mí</a></li>
+          <li><a href="experience.html" class="hover:text-[#4F81BD]">Experiencia</a></li>
+          <li><a href="projects.html" class="hover:text-[#4F81BD]">Proyectos</a></li>
+          <li><a href="contact.html" class="hover:text-[#4F81BD]">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
   <!-- HERO SECTION -->
-  <section class="hero">
-    <div class="container hero-content">
-      <div class="hero-text">
-        <h2>Hola, soy Juan González 👋</h2>
-        <h3>Analista Senior de Sistemas & Estudiante de Ingeniería de Software</h3>
-        <p>Administro servidores, diseño soluciones y escribo código que resuelve problemas reales.</p>
-        <a href="assets/documents/CV_JuanGonzalez.pdf" class="btn" target="_blank">Ver mi CV</a>
+    <!-- HERO SECTION -->
+  <section class="hero bg-white py-20">
+    <div class="container mx-auto flex flex-col md:flex-row items-center gap-10">
+      <div class="hero-text md:w-1/2">
+        <h2 class="text-4xl font-bold text-[#1F497D] mb-4">Hola, soy Juan González 👋</h2>
+        <h3 class="text-xl mb-4 text-[#4F81BD]">Analista Senior de Sistemas & Estudiante de Ingeniería de Software</h3>
+        <p class="mb-6">Administro servidores, diseño soluciones y escribo código que resuelve problemas reales.</p>
+        <a href="assets/documents/CV_JuanGonzalez.pdf" target="_blank"
+          class="bg-[#1F497D] hover:bg-[#4F81BD] text-white font-semibold px-6 py-3 rounded-lg transition">Ver mi CV</a>
       </div>
-      <div class="hero-img">
-        <img src="assets/images/perfil.jpg" alt="Foto de Juan González">
+      <div class="hero-img md:w-1/2">
+        <img src="assets/images/perfil.jpg" 
+            alt="Foto de Juan González" 
+            class="rounded-xl shadow-lg filter grayscale hover:grayscale-0 transition duration-500">
       </div>
     </div>
-  </section>
+</section>
+
 
   <!-- RESUMEN RÁPIDO -->
-  <section class="quick-stats">
-    <div class="container stats-grid">
-      <div class="stat">
-        <h4>🎓 +6 semestres</h4>
+  <section class="quick-stats py-16 bg-gray-100">
+    <div class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+      <div class="stat bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
+        <h4 class="text-2xl font-bold mb-2 text-[#1F497D]">🎓 +6 semestres</h4>
         <p>en Ingeniería de Software</p>
       </div>
-      <div class="stat">
-        <h4>💼 Soporte nacional</h4>
+      <div class="stat bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
+        <h4 class="text-2xl font-bold mb-2 text-[#1F497D]">💼 Soporte nacional</h4>
         <p>y liderazgo de TI en Zonalogística</p>
       </div>
-      <div class="stat">
-        <h4>🧠 Experto</h4>
+      <div class="stat bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
+        <h4 class="text-2xl font-bold mb-2 text-[#1F497D]">🧠 Experto</h4>
         <p>en Linux, Windows Server y redes</p>
       </div>
     </div>
   </section>
 
   <!-- FOOTER -->
-  <footer>
-    <div class="container footer-content">
+  <footer class="bg-[#1F497D] text-white py-6 mt-10">
+    <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
       <p>&copy; 2025 Juan González. Todos los derechos reservados.</p>
-      <div class="social-icons">
-        <a href="mailto:pinkman0821@gmail.com" target="_blank"><img src="assets/icons/email.svg" alt="Email"></a>
-        <a href="https://github.com/Juangonzalez0821" target="_blank"><img src="assets/icons/github.svg" alt="GitHub"></a>
-        <a href="https://www.linkedin.com/in/pinkman0821" target="_blank"><img src="assets/icons/linkedin.svg" alt="LinkedIn"></a>
-        <a href="https://wa.me/573025469721" target="_blank"><img src="assets/icons/whatsapp.svg" alt="WhatsApp"></a>
-        <!-- LinkedIn opcional -->
+      <div class="flex space-x-4 mt-4 md:mt-0">
+        <a href="mailto:pinkman0821@gmail.com" target="_blank"><img src="assets/icons/email.svg" alt="Email" class="h-6 w-6"></a>
+        <a href="https://github.com/pinkman0821a" target="_blank"><img src="assets/icons/github.svg" alt="GitHub" class="h-6 w-6"></a>
+        <a href="https://www.linkedin.com/in/pinkman0821" target="_blank"><img src="assets/icons/linkedin.svg" alt="LinkedIn" class="h-6 w-6"></a>
+        <a href="https://wa.me/573025469721" target="_blank"><img src="assets/icons/whatsapp.svg" alt="WhatsApp" class="h-6 w-6"></a>
+      </div>
     </div>
   </footer>
 
-  <script src="js/main.js"></script>
 </body>
 </html>

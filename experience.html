@@ -4,67 +4,91 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Experiencia - Juan González</title>
-  <link rel="stylesheet" href="css/styles.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml" />
   <meta name="description" content="Conoce la experiencia laboral y formación académica de Juan González." />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#1F497D',   // azul oscuro
+            secondary: '#4F81BD', // azul claro
+            dark: '#333333',
+          }
+        }
+      }
+    }
+  </script>
 </head>
-<body>
-  <header>
-    <div class="container header-content">
-      <h1 class="logo">JuanGonzález.dev</h1>
-      <div class="menu-toggle" aria-label="Abrir menú">&#9776;</div>
+<body class="text-dark font-sans bg-gray-50">
+
+  <!-- HEADER -->
+  <header class="bg-primary text-white shadow-md">
+    <div class="container mx-auto flex justify-between items-center p-4">
+      <h1 class="text-xl md:text-2xl font-bold">JuanGonzález.dev</h1>
       <nav>
-        <ul class="nav-links">
-          <li><a href="index.html">Inicio</a></li>
-          <li><a href="about.html">Sobre mí</a></li>
-          <li><a href="experience.html" class="active">Experiencia</a></li>
-          <li><a href="projects.html">Proyectos</a></li>
-          <li><a href="contact.html">Contacto</a></li>
+        <ul class="flex space-x-6">
+          <li><a href="index.html" class="hover:text-secondary">Inicio</a></li>
+          <li><a href="about.html" class="hover:text-secondary">Sobre mí</a></li>
+          <li><a href="experience.html" class="text-secondary font-semibold">Experiencia</a></li>
+          <li><a href="projects.html" class="hover:text-secondary">Proyectos</a></li>
+          <li><a href="contact.html" class="hover:text-secondary">Contacto</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <main class="experience-section container">
-    <h2>Experiencia Profesional</h2>
+  <!-- MAIN -->
+  <main class="container mx-auto px-6 py-12">
+    <h2 class="text-3xl font-bold text-primary mb-8">Experiencia Profesional</h2>
 
-    <section class="job">
-      <h3>Analista Senior de Sistemas - Zonalogística</h3>
-      <span class="job-date">Dic 2023 - Presente</span>
-      <p>
-        Lidero el área de sistemas en Cundinamarca, brindando soporte remoto a nivel nacional. Administro servidores Windows Server 2025, Active Directory, Linux, ISS, carpetas compartidas y gestiono la red de la empresa.
+    <!-- Trabajo 1 -->
+    <section class="mb-10 bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
+      <h3 class="text-xl font-semibold text-primary">Analista Senior de Sistemas - Zonalogística</h3>
+      <span class="block text-sm text-secondary mb-3">Dic 2023 - Presente</span>
+      <p class="leading-relaxed">
+        Lidero el área de sistemas en Cundinamarca, brindando soporte remoto a nivel nacional. 
+        Administro servidores Windows Server 2025, Active Directory, Linux, ISS, carpetas compartidas 
+        y gestiono la red de la empresa.
       </p>
     </section>
 
-    <section class="job">
-      <h3>Tecnólogo en Sistemas - Fundación Universitaria Compensar</h3>
-      <span class="job-date">2021 - 2023</span>
-      <p>
-        Formación técnica avanzada en redes, servidores y sistemas operativos. Desarrollo de proyectos prácticos y experiencia en ambientes Linux y Windows.
+    <!-- Trabajo 2 -->
+    <section class="mb-10 bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
+      <h3 class="text-xl font-semibold text-primary">Tecnólogo en Sistemas - Fundación Universitaria Compensar</h3>
+      <span class="block text-sm text-secondary mb-3">2021 - 2023</span>
+      <p class="leading-relaxed">
+        Formación técnica avanzada en redes, servidores y sistemas operativos. 
+        Desarrollo de proyectos prácticos y experiencia en ambientes Linux y Windows.
       </p>
     </section>
 
-    <h2>Formación Académica</h2>
+    <h2 class="text-3xl font-bold text-primary mb-8">Formación Académica</h2>
 
-    <section class="education">
-      <h3>Ingeniería de Software - Fundación Universitaria Compensar</h3>
-      <span class="education-date">2022 - Actualmente (6º semestre)</span>
-      <p>
+    <!-- Educación -->
+    <section class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
+      <h3 class="text-xl font-semibold text-primary">Ingeniería de Software - Fundación Universitaria Compensar</h3>
+      <span class="block text-sm text-secondary mb-3">2022 - Actualmente (6º semestre)</span>
+      <p class="leading-relaxed">
         Actualmente cursando sexto semestre, especializándome en desarrollo de software y ciberseguridad.
       </p>
     </section>
   </main>
 
-  <footer>
-    <div class="container footer-content">
+  <!-- FOOTER -->
+  <footer class="bg-primary text-white py-6 mt-12">
+    <div class="container mx-auto flex flex-col md:flex-row justify-between items-center px-6">
       <p>&copy; 2025 Juan González. Todos los derechos reservados.</p>
-      <div class="social-icons">
-        <a href="mailto:pinkman0821@gmail.com"><img src="assets/icons/email.svg" alt="Email" /></a>
-        <a href="https://github.com/Juangonzalez0821" target="_blank"><img src="assets/icons/github.svg" alt="GitHub" /></a>
+      <div class="flex space-x-4 mt-4 md:mt-0">
+        <a href="mailto:pinkman0821@gmail.com"><img src="assets/icons/email.svg" alt="Email" class="h-6 w-6"></a>
+        <a href="https://github.com/Juangonzalez0821" target="_blank"><img src="assets/icons/github.svg" alt="GitHub" class="h-6 w-6"></a>
+        <a href="https://www.linkedin.com/in/pinkman0821" target="_blank"><img src="assets/icons/linkedin.svg" alt="LinkedIn" class="h-6 w-6"></a>
+        <a href="https://wa.me/573025469721" target="_blank"><img src="assets/icons/whatsapp.svg" alt="WhatsApp" class="h-6 w-6"></a>
       </div>
     </div>
   </footer>
 
-  <script src="js/main.js"></script>
 </body>
 </html>

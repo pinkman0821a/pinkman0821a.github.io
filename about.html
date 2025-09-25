@@ -4,35 +4,56 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Sobre mí - Juan González</title>
-  <link rel="stylesheet" href="css/styles.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml" />
   <meta name="description" content="Conoce más sobre Juan González: su formación, experiencia y habilidades." />
+  
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#1F497D',   // azul oscuro
+            secondary: '#4F81BD', // azul claro
+            dark: '#333333',
+          }
+        }
+      }
+    }
+  </script>
 </head>
-<body>
-  <header>
-    <div class="container header-content">
-        <h1 class="logo">JuanGonzález.dev</h1>
-        <div class="menu-toggle" aria-label="Abrir menú">&#9776;</div>
-        <nav>
-        <ul class="nav-links">
-            <li><a href="index.html" >Inicio</a></li>
-            <li><a href="about.html" class="active">Sobre mí</a></li>
-            <li><a href="experience.html">Experiencia</a></li>
-            <li><a href="projects.html">Proyectos</a></li>
-            <li><a href="contact.html">Contacto</a></li>
+<body class="text-dark font-sans">
+
+  <!-- HEADER -->
+  <header class="bg-primary text-white shadow-md">
+    <div class="container mx-auto flex justify-between items-center p-4">
+      <h1 class="text-xl md:text-2xl font-bold">JuanGonzález.dev</h1>
+      <nav>
+        <ul class="flex space-x-6">
+          <li><a href="index.html" class="hover:text-secondary">Inicio</a></li>
+          <li><a href="about.html" class="text-secondary font-semibold">Sobre mí</a></li>
+          <li><a href="experience.html" class="hover:text-secondary">Experiencia</a></li>
+          <li><a href="projects.html" class="hover:text-secondary">Proyectos</a></li>
+          <li><a href="contact.html" class="hover:text-secondary">Contacto</a></li>
         </ul>
-        </nav>
+      </nav>
     </div>
-    </header>
+  </header>
 
-  <main class="about-section container">
-    <h2>Sobre mí</h2>
+  <!-- MAIN -->
+  <main class="container mx-auto px-6 py-12">
+    <h2 class="text-3xl font-bold text-primary mb-8">Sobre mí</h2>
 
-    <div class="about-content">
-      <div class="about-image">
-        <img src="assets/images/perfil.jpg" alt="Foto de Juan González" />
+    <div class="flex flex-col md:flex-row gap-10 items-center">
+      <!-- Imagen -->
+      <div class="md:w-1/3">
+        <img src="assets/images/perfil.jpg" 
+             alt="Foto de Juan González" 
+             class="rounded-xl shadow-lg filter grayscale hover:grayscale-0 transition duration-500" />
       </div>
-      <div class="about-text">
+
+      <!-- Texto -->
+      <div class="md:w-2/3 space-y-4 text-lg leading-relaxed">
         <p>
           ¡Hola! Soy Juan González, Analista Senior de Sistemas con amplia experiencia en
           administración de servidores Windows y Linux, soporte a nivel nacional y
@@ -55,21 +76,26 @@
           Me encanta enfrentar desafíos que pongan a prueba mi creatividad y conocimiento.
         </p>
 
-        <a href="assets/CV_JuanGonzalez.pdf" class="btn" target="_blank">Descargar mi CV</a>
+        <a href="assets/documents/CV_JuanGonzalez.pdf" target="_blank"
+           class="inline-block bg-primary hover:bg-secondary text-white font-semibold px-6 py-3 rounded-lg transition">
+           Descargar mi CV
+        </a>
       </div>
     </div>
   </main>
 
-  <footer>
-    <div class="container footer-content">
+  <!-- FOOTER -->
+  <footer class="bg-primary text-white py-6 mt-12">
+    <div class="container mx-auto flex flex-col md:flex-row justify-between items-center px-6">
       <p>&copy; 2025 Juan González. Todos los derechos reservados.</p>
-      <div class="social-icons">
-        <a href="mailto:pinkman0821@gmail.com"><img src="assets/icons/email.svg" alt="Email" /></a>
-        <a href="https://github.com/Juangonzalez0821" target="_blank"><img src="assets/icons/github.svg" alt="GitHub" /></a>
+      <div class="flex space-x-4 mt-4 md:mt-0">
+        <a href="mailto:pinkman0821@gmail.com"><img src="assets/icons/email.svg" alt="Email" class="h-6 w-6"></a>
+        <a href="https://github.com/Juangonzalez0821" target="_blank"><img src="assets/icons/github.svg" alt="GitHub" class="h-6 w-6"></a>
+        <a href="https://www.linkedin.com/in/pinkman0821" target="_blank"><img src="assets/icons/linkedin.svg" alt="LinkedIn" class="h-6 w-6"></a>
+        <a href="https://wa.me/573025469721" target="_blank"><img src="assets/icons/whatsapp.svg" alt="WhatsApp" class="h-6 w-6"></a>
       </div>
     </div>
   </footer>
 
-  <script src="js/main.js"></script>
 </body>
 </html>
